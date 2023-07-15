@@ -3,6 +3,8 @@ package dayhipti.controlmonetario.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 @Entity
 @Table(name = "usuario")
@@ -29,5 +31,6 @@ public class Usuario {
     @ManyToOne(optional = false,fetch = FetchType.EAGER)
             @JoinColumn(name = "id_perfil_usuario",nullable = false, columnDefinition = "varchar(2)")
     private Perfil perfil;
-
+    @OneToMany(mappedBy = "usuario",cascade = CascadeType.ALL)
+    private List<Telefono> ListarTelefonos;
 }

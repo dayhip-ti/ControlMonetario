@@ -9,7 +9,7 @@ import java.util.List;
 public interface IUsuarioService {
     Usuario crearUsuario(Usuario usuario);
     List<Usuario> listaUsuario();
-    Usuario buscarUsuario(int idUsuario);
+    Usuario buscarUsuario(String idUsuario);
     Usuario actualizarUsuario(Usuario usuarioActualizar);
-    void eliminarUsuario(int idUsuario);
+    void eliminarUsuario(String idUsuario);
 }

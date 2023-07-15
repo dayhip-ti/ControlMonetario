@@ -17,6 +17,6 @@ public class Perfil {
     @Column(name = "id_tipo_usuario",nullable = false,columnDefinition = "text")
     private  String idTipoUsuario;
     @Column(name = "fecha_creacion", nullable = false)
-    @OneToMany(mappedBy = "usuario",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "perfil",cascade = CascadeType.ALL)
     private List<Usuario> listarUsuarios;
 }

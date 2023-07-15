@@ -1,9 +1,6 @@
 package dayhipti.controlmonetario.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
@@ -11,10 +8,11 @@ import lombok.Data;
 @Table(name = "egreso")
 public class Egreso {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_egreso",nullable = false)
     private int idEgreso;
-    @Column(name = "nombre_egreso",nullable = false)
+    @Column(name = "nombre_egreso",nullable = false, columnDefinition = "text")
     private String nombreEgreso;
-    @Column(name = "saldo",nullable = false)
+    @Column(name = "saldo",nullable = false, columnDefinition = "real")
     private double saldo;
 }

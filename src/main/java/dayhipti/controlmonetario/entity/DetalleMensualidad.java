@@ -12,10 +12,10 @@ public class DetalleMensualidad {
     @Column(name = "id_mensualidad_detalle",nullable = false)
     private int idMensualidadDetalle;
     @ManyToOne(optional = false,fetch = FetchType.EAGER)
-    @JoinColumn(name = "RUT_usuario",columnDefinition = "varchar(12)")
+    @JoinColumn(name = "RUT_usuario",columnDefinition = "varchar(12)",nullable = false)
     private Usuario usuario;
     @ManyToOne(optional = false,fetch = FetchType.EAGER)
-    @JoinColumn(name = "ID_mensualidad", columnDefinition = "varchar(10)")
+    @JoinColumn(name = "ID_mensualidad", columnDefinition = "varchar(10)",nullable = false)
     private Mes mes;
     @Column(columnDefinition = "BLOB")
     private byte[] comprobante;

@@ -32,5 +32,8 @@ public class Usuario {
             @JoinColumn(name = "id_perfil_usuario",nullable = false, columnDefinition = "varchar(2)")
     private Perfil perfil;
     @OneToMany(mappedBy = "usuario",cascade = CascadeType.ALL)
-    private List<Telefono> ListarTelefonos;
+    private List<Telefono> listarTelefonos;
+    @OneToMany(mappedBy = "usuario",cascade = CascadeType.ALL)
+    private List<DetalleMensualidad> listarMensualidades;
+
 }

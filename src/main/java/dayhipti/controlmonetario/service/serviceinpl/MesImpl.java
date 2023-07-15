@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service("mesImpl")
-public interface MesImpl implements IMesService {
+public class MesImpl implements IMesService {
     @Autowired
     IMesRepository objMesRepo;
 }

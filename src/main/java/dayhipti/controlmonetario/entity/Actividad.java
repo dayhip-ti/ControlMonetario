@@ -11,8 +11,8 @@ public class Actividad {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_actividad",nullable = false)
     private int idActividad;
-    @Column(name = "nombre_actividad",nullable = false)
+    @Column(name = "nombre_actividad",nullable = false,columnDefinition = "text")
     private String nombreActividad;
-    @Column(name = "monto_recaudado",nullable = false)
+    @Column(name = "monto_recaudado",nullable = false,columnDefinition = "real")
     private double montoRecaudado;
 }
